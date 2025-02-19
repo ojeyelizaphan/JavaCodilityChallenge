@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class CyclicRotation {
     public int[] solution(int[] A, int K){
