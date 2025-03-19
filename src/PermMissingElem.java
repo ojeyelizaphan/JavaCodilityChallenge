@@ -2,18 +2,23 @@ import java.util.Arrays;
 
 public class PermMissingElem {
     public int solution(int[] A){
-        //step one: sort the array in ascending order
+        //solution: Expected sum of the elements - actual sum of the elements
         Arrays.sort(A);
-        int missingElem = 0;
-        //step two: continue if the number exists or is N+1
-        for (int i = 0; i < A.length; i++){
-            if ((i+1) == A[i])
-                continue;
-            else
-                missingElem = i+1;
-        }
+        //step one: find the expected sum of elements
+        //n/2 * (n + 1)
+        int n = A.length + 1;
+        int expectedSum = (n * (n+1))/2;
 
-        return missingElem;
+        //step two: find actual sum of elements
+        int actualSum = 0;
+        for (int i = 0; i < A.length; i++){
+            actualSum += A[i];
+
+        }
+        //step three: return difference
+        return  expectedSum - actualSum;
+
+
     }
 
     public static void main(String[] args){
@@ -24,3 +29,47 @@ public class PermMissingElem {
         System.out.println(permMissingElem.solution(A));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* formula for permutation = n!/(n-r)!
+* =
+*
+*
+*
+*
+*
+*
+* */
