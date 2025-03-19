@@ -1,9 +1,7 @@
-import java.util.Arrays;
 
 public class PermMissingElem {
     public int solution(int[] A){
         //solution: Expected sum of the elements - actual sum of the elements
-        Arrays.sort(A);
         //step one: find the expected sum of elements
         //n/2 * (n + 1)
         int n = A.length + 1;
@@ -29,47 +27,3 @@ public class PermMissingElem {
         System.out.println(permMissingElem.solution(A));
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-* formula for permutation = n!/(n-r)!
-* =
-*
-*
-*
-*
-*
-*
-* */
